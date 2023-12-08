@@ -9,7 +9,31 @@ import SwiftUI
 
 struct FeedView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            ScrollView {
+                LazyVStack(spacing: 32) {
+                    ForEach(0...15, id: \.self) { _ in
+                        FeedCell()
+                    }
+                }
+            }
+            .navigationTitle("Feed")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Image("instagram_logo_black")
+                        .resizable()
+                        .frame(width: 100, height: 32)
+                }
+                
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button(action: { print("DEBUG: Tapped toolbar paperplane") }, label: {
+                        Image(systemName: "paperplane")
+                    })
+                    .tint(.black)
+                }
+            }
+        }
     }
 }
 
