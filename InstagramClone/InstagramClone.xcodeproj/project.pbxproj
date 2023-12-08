@@ -17,6 +17,7 @@
 		E06072CE2B23B4EF00BF4856 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06072CD2B23B4EF00BF4856 /* FeedView.swift */; };
 		E06072D02B23B4F700BF4856 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06072CF2B23B4F700BF4856 /* FeedCell.swift */; };
 		E06072D22B23BDA600BF4856 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06072D12B23BDA600BF4856 /* SearchView.swift */; };
+		E06072D42B23BFC800BF4856 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06072D32B23BFC800BF4856 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		E06072CD2B23B4EF00BF4856 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		E06072CF2B23B4F700BF4856 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		E06072D12B23BDA600BF4856 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		E06072D32B23BFC800BF4856 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		E06072BF2B23858F00BF4856 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				E06072D32B23BFC800BF4856 /* LoginView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				E06072D02B23B4F700BF4856 /* FeedCell.swift in Sources */,
 				E06072C92B238B8200BF4856 /* ProfileView.swift in Sources */,
 				E06072AE2B23841300BF4856 /* ContentView.swift in Sources */,
+				E06072D42B23BFC800BF4856 /* LoginView.swift in Sources */,
 				E06072CC2B23AB4100BF4856 /* UserStatView.swift in Sources */,
 				E06072D22B23BDA600BF4856 /* SearchView.swift in Sources */,
 				E06072AC2B23841300BF4856 /* InstagramCloneApp.swift in Sources */,
