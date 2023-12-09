@@ -15,26 +15,32 @@ struct SearchView: View {
             ScrollView {
                 LazyVStack(spacing: 12) {
                     ForEach(User.MOCK_USERS) { user in
-                        HStack {
-                            Image(user.profileImageUrl ?? "")
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 40, height: 40)
-                                .clipShape(Circle())
-                            
-                            VStack(alignment: .leading) {
-                                Text(user.username)
-                                    .fontWeight(.semibold)
+                        NavigationLink(value: user) {
+                            HStack {
+                                Image(user.profileImageUrl ?? "")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 40, height: 40)
+                                    .clipShape(Circle())
                                 
-                                if let fullname = user.fullname {
-                                    Text(fullname)
+                                VStack(alignment: .leading) {
+                                    Text(user.username)
+                                        .fontWeight(.semibold)
+                                    
+                                    if let fullname = user.fullname {
+                                        Text(fullname)
+                                    }
                                 }
+                                .font(.footnote)
+                                
+                                Spacer()
                             }
-                            .font(.footnote)
-                            
-                            Spacer()
+                            .foregroundStyle(Color.black)
+                            .padding(.horizontal)
                         }
-                        .padding(.horizontal)
+                        .navigationDestination(for: User.self) { user in
+                            ProfileView(user: user)
+                        }
                     }
                 }
                 .searchable(text: $searchText, prompt: "Search ...")
