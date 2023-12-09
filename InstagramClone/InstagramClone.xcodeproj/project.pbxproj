@@ -143,10 +143,10 @@
 			isa = PBXGroup;
 			children = (
 				E06072D52B23FA1A00BF4856 /* AddEmailView.swift */,
+				E06072DD2B2401F700BF4856 /* CompleteSignUpView.swift */,
+				E06072DB2B24010700BF4856 /* CreatePasswordView.swift */,
 				E06072D92B23FF1A00BF4856 /* CreateUsernameView.swift */,
 				E06072D32B23BFC800BF4856 /* LoginView.swift */,
-				E06072DB2B24010700BF4856 /* CreatePasswordView.swift */,
-				E06072DD2B2401F700BF4856 /* CompleteSignUpView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -201,8 +201,8 @@
 		E06072CA2B23AB2800BF4856 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				E06072CB2B23AB4100BF4856 /* UserStatView.swift */,
 				E06072D72B23FE2C00BF4856 /* IGTextFieldModifier.swift */,
+				E06072CB2B23AB4100BF4856 /* UserStatView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
