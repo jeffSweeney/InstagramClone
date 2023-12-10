@@ -8,26 +8,30 @@
 import SwiftUI
 
 struct FeedCell: View {
+    let post: Post
+    
     var body: some View {
         VStack {
             // MARK: - Profile Image & Username
             HStack {
-                Image("batman-2")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 40, height: 40)
-                    .clipShape(Circle())
-                
-                Text("Batman")
-                    .font(.footnote)
-                    .fontWeight(.semibold)
+                if let user = post.user {
+                    Image(user.profileImageUrl ?? "")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 40, height: 40)
+                        .clipShape(Circle())
+                    
+                    Text(user.username)
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                }
                 
                 Spacer()
             }
             .padding(.leading, 8)
             
             // MARK: - Post Image
-            Image("batman-2")
+            Image(post.imageUrl)
                 .resizable()
                 .scaledToFill()
                 .frame(height: 400)
@@ -57,7 +61,7 @@ struct FeedCell: View {
             .tint(.black)
             
             // MARK: - Likes Label
-            Text("23 likes")
+            Text("\(post.likes) likes")
                 .font(.footnote)
                 .fontWeight(.semibold)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -66,8 +70,8 @@ struct FeedCell: View {
             
             // MARK: - Caption Label
             HStack {
-                Text("batman ").fontWeight(.semibold) + // The '+' treats this as one big text component for clean multi-line spacing
-                Text("Test caption for now")
+                Text("\(post.user?.username ?? "") ").fontWeight(.semibold) + // The '+' treats this as one big text component for clean multi-line spacing
+                Text(post.caption)
             }
             .font(.footnote)
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -86,5 +90,5 @@ struct FeedCell: View {
 }
 
 #Preview {
-    FeedCell()
+    FeedCell(post: Post.MOCK_POSTS[1])
 }
