@@ -35,6 +35,8 @@
 		E0A0AC022B27A857006DCACE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E0A0AC012B27A857006DCACE /* FirebaseFirestore */; };
 		E0A0AC042B27A857006DCACE /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E0A0AC032B27A857006DCACE /* FirebaseFirestoreSwift */; };
 		E0A0AC062B27A857006DCACE /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = E0A0AC052B27A857006DCACE /* FirebaseStorage */; };
+		E0A0AC0A2B27AE61006DCACE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A0AC092B27AE61006DCACE /* AuthService.swift */; };
+		E0A0AC0E2B27C0E6006DCACE /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A0AC0D2B27C0E6006DCACE /* ContentViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +65,8 @@
 		E0A0ABF82B278728006DCACE /* UploadPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostView.swift; sourceTree = "<group>"; };
 		E0A0ABFA2B278C12006DCACE /* UploadPostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadPostViewModel.swift; sourceTree = "<group>"; };
 		E0A0ABFC2B27A74A006DCACE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E0A0AC092B27AE61006DCACE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		E0A0AC0D2B27C0E6006DCACE /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +109,6 @@
 				E06072BA2B23855000BF4856 /* Model */,
 				E06072B92B23854A00BF4856 /* Services */,
 				E0A0ABFC2B27A74A006DCACE /* GoogleService-Info.plist */,
-				E06072AD2B23841300BF4856 /* ContentView.swift */,
 				E06072AF2B23841400BF4856 /* Assets.xcassets */,
 				E06072B12B23841400BF4856 /* Preview Content */,
 			);
@@ -169,11 +172,8 @@
 		E06072BF2B23858F00BF4856 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				E06072D52B23FA1A00BF4856 /* AddEmailView.swift */,
-				E06072DD2B2401F700BF4856 /* CompleteSignUpView.swift */,
-				E06072DB2B24010700BF4856 /* CreatePasswordView.swift */,
-				E06072D92B23FF1A00BF4856 /* CreateUsernameView.swift */,
-				E06072D32B23BFC800BF4856 /* LoginView.swift */,
+				E0A0AC082B27AE58006DCACE /* Service */,
+				E0A0AC072B27AE48006DCACE /* View */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -200,6 +200,8 @@
 		E06072C22B2385A800BF4856 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				E0A0AC0B2B27C0D0006DCACE /* View */,
+				E0A0AC0C2B27C0D4006DCACE /* ViewModel */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -237,6 +239,42 @@
 				E06072CB2B23AB4100BF4856 /* UserStatView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		E0A0AC072B27AE48006DCACE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E06072D52B23FA1A00BF4856 /* AddEmailView.swift */,
+				E06072DD2B2401F700BF4856 /* CompleteSignUpView.swift */,
+				E06072DB2B24010700BF4856 /* CreatePasswordView.swift */,
+				E06072D92B23FF1A00BF4856 /* CreateUsernameView.swift */,
+				E06072D32B23BFC800BF4856 /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E0A0AC082B27AE58006DCACE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E0A0AC092B27AE61006DCACE /* AuthService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E0A0AC0B2B27C0D0006DCACE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E06072AD2B23841300BF4856 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E0A0AC0C2B27C0D4006DCACE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E0A0AC0D2B27C0E6006DCACE /* ContentViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,12 +362,14 @@
 				E06072C92B238B8200BF4856 /* ProfileView.swift in Sources */,
 				E06072AE2B23841300BF4856 /* ContentView.swift in Sources */,
 				E06072D42B23BFC800BF4856 /* LoginView.swift in Sources */,
+				E0A0AC0A2B27AE61006DCACE /* AuthService.swift in Sources */,
 				E0A0ABF32B2658E0006DCACE /* Post.swift in Sources */,
 				E06072CC2B23AB4100BF4856 /* UserStatView.swift in Sources */,
 				E0A0ABF12B24E45D006DCACE /* CurrentUserProfileView.swift in Sources */,
 				E06072D62B23FA1A00BF4856 /* AddEmailView.swift in Sources */,
 				E0A0ABF52B265FD3006DCACE /* PostGridView.swift in Sources */,
 				E06072DA2B23FF1A00BF4856 /* CreateUsernameView.swift in Sources */,
+				E0A0AC0E2B27C0E6006DCACE /* ContentViewModel.swift in Sources */,
 				E0A0ABFB2B278C12006DCACE /* UploadPostViewModel.swift in Sources */,
 				E0A0ABF72B266389006DCACE /* ProfileHeaderView.swift in Sources */,
 				E06072DE2B2401F700BF4856 /* CompleteSignUpView.swift in Sources */,
