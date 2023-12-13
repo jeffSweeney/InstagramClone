@@ -25,7 +25,7 @@ struct CurrentUserProfileView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button(action: {
-                        print("DEBUG: Tapped Nav Bar Button")
+                        AuthService.shared.signout()
                     }, label: {
                         Image(systemName: "line.3.horizontal")
                             .tint(Color(.black))
