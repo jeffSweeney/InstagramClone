@@ -7,9 +7,8 @@
 
 import SwiftUI
 
-struct CurrentUserProfileView: View {    
-    // Defaulting "Current user" to Venom for now - will be dynamic later.
-    private let currentUser = User.MOCK_USERS[1]
+struct CurrentUserProfileView: View {
+    let currentUser: User
     
     var body: some View {
         NavigationStack {
@@ -37,5 +36,5 @@ struct CurrentUserProfileView: View {
 }
 
 #Preview {
-    CurrentUserProfileView()
+    CurrentUserProfileView(currentUser: .MOCK_USERS[1])
 }
