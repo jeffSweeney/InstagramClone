@@ -14,6 +14,10 @@ struct User: Identifiable, Codable, Hashable {
     var fullname: String?
     var bio: String?
     let email: String
+    
+    var isCurrentUser: Bool {
+        return self == AuthService.shared.currentUser
+    }
 }
 
 extension User {

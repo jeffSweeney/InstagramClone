@@ -49,20 +49,46 @@ struct ProfileHeaderView: View {
             
             // MARK: - Action Button
             Button(action: {
-                print("DEBUG: Tapped Edit Profile")
+                print("DEBUG: Tapped \(actionMessage)")
             }, label: {
-                Text("Edit Profile")
+                Text(actionButton)
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .frame(width: 360, height: 32)
-                    .foregroundStyle(Color(.black))
+                    .background(backgroundColor)
+                    .foregroundStyle(foregroundColor)
+                    .cornerRadius(6)
                     .overlay {
-                        RoundedRectangle(cornerRadius: 6).stroke(Color.gray, lineWidth: 1)
+                        RoundedRectangle(cornerRadius: 6).stroke(strokeColor, lineWidth: 1)
                     }
             })
             
             Divider()
         }
+    }
+}
+
+// MARK: - User Context Helpers
+extension ProfileHeaderView {
+    private var actionButton: String {
+        return user.isCurrentUser ? "Edit Profile" : "Follow"
+    }
+    
+    private var backgroundColor: Color {
+        return user.isCurrentUser ? .white : Color(.systemBlue)
+    }
+    
+    private var foregroundColor: Color {
+        return user.isCurrentUser ? .black : .white
+    }
+    
+    private var strokeColor: Color {
+        return user.isCurrentUser ? .gray : .clear
+    }
+    
+    // TODO: REMOVE - This is just for debug testing
+    private var actionMessage: String {
+        return user.isCurrentUser ? "Edit Profile" : "Follow"
     }
 }
 
