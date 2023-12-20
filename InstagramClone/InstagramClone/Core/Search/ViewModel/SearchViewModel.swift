@@ -17,7 +17,7 @@ class SearchViewModel: ObservableObject {
     @MainActor
     private func fetchSearchUsers() async throws {
         try await self.searchUsers = UserService.fetchAllUsers().filter({ user in
-            user != AuthService.shared.currentUser
+            user.id != AuthService.shared.currentUser?.id
         })
     }
 }

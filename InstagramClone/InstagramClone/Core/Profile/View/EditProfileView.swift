@@ -10,7 +10,11 @@ import SwiftUI
 
 struct EditProfileView: View {
     @Environment(\.dismiss) var dismiss
-    @StateObject var viewModel = EditProfileViewModel()
+    @StateObject var viewModel: EditProfileViewModel
+    
+    init(user: User) {
+        self._viewModel = StateObject(wrappedValue: EditProfileViewModel(user: user))
+    }
     
     var body: some View {
         VStack {
@@ -32,7 +36,7 @@ struct EditProfileView: View {
                 Spacer()
                 
                 Button(action: {
-                    print("Tapped Done")
+                    Task { try await viewModel.updateUserData() }
                     dismiss()
                 }, label: {
                     Text("Done")
@@ -76,7 +80,7 @@ struct EditProfileView: View {
 }
 
 #Preview {
-    EditProfileView()
+    EditProfileView(user: User.MOCK_USERS[1])
 }
 
 // MARK: - Profile Row Template
