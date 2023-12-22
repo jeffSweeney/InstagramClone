@@ -15,11 +15,7 @@ struct FeedCell: View {
             // MARK: - Profile Image & Username
             HStack {
                 if let user = post.user {
-                    Image(user.profileImageUrl ?? "")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 40, height: 40)
-                        .clipShape(Circle())
+                    CircularProfileImageView(user: user, size: .xSmall)
                     
                     Text(user.username)
                         .font(.footnote)

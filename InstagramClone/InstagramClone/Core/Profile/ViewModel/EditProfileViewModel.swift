@@ -16,13 +16,15 @@ class EditProfileViewModel: ObservableObject {
         didSet { Task { await loadImage(fromItem: selectedImage)} }
     }
     @Published var profileImage: Image?
-    @Published var name: String = ""
-    @Published var bio: String = ""
+    @Published var name: String
+    @Published var bio: String
     
     private var uiImage: UIImage?
     
     init(user: User) {
         self.user = user
+        self.name = user.fullname ?? ""
+        self.bio = user.bio ?? ""
     }
     
     func loadImage(fromItem item: PhotosPickerItem?) async {
@@ -58,9 +60,5 @@ class EditProfileViewModel: ObservableObject {
         if !data.isEmpty {
             try await Firestore.firestore().collection("users").document(user.id).updateData(data)
         }
-    }
-    
-    func currentProfileImage() -> Image {
-        return profileImage ?? Image(systemName: "person")
     }
 }
