@@ -43,6 +43,7 @@
 		E0A0AC192B2E16ED006DCACE /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A0AC182B2E16ED006DCACE /* SearchViewModel.swift */; };
 		E0CC5B6E2B32195D00A85220 /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CC5B6D2B32195D00A85220 /* EditProfileView.swift */; };
 		E0CC5B722B32237A00A85220 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CC5B712B32237A00A85220 /* EditProfileViewModel.swift */; };
+		E0F2647E2B362383004A704F /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F2647D2B362383004A704F /* ImageUploader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		E0A0AC182B2E16ED006DCACE /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		E0CC5B6D2B32195D00A85220 /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		E0CC5B712B32237A00A85220 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
+		E0F2647D2B362383004A704F /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 		E06072B92B23854A00BF4856 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E0F2647D2B362383004A704F /* ImageUploader.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				E0A0AC0E2B27C0E6006DCACE /* ContentViewModel.swift in Sources */,
 				E0CC5B6E2B32195D00A85220 /* EditProfileView.swift in Sources */,
 				E0A0AC132B2A435C006DCACE /* LoginViewModel.swift in Sources */,
+				E0F2647E2B362383004A704F /* ImageUploader.swift in Sources */,
 				E0A0AC112B2A27C8006DCACE /* RegistrationViewModel.swift in Sources */,
 				E0A0ABFB2B278C12006DCACE /* UploadPostViewModel.swift in Sources */,
 				E0A0ABF72B266389006DCACE /* ProfileHeaderView.swift in Sources */,
