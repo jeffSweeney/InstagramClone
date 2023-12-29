@@ -19,9 +19,7 @@ struct UploadPostView: View {
             // MARK: - Action Toolbar
             HStack {
                 Button(action: {
-                    caption = ""
-                    viewModel.cancelUpload()
-                    tabIndex = 0 // Return back to Home tab in our MainTabView
+                    dismissView()
                 }, label: {
                     Text("Cancel")
                 })
@@ -34,7 +32,10 @@ struct UploadPostView: View {
                 Spacer()
                 
                 Button(action: {
-                    print("DEBUG: Upload Post tapped")
+                    Task {
+                        try await viewModel.uploadPost(caption: self.caption)
+                        dismissView()
+                    }
                 }, label: {
                     Text("Upload")
                         .fontWeight(.semibold)
@@ -61,6 +62,14 @@ struct UploadPostView: View {
         }
         .onAppear { imagePickerPresented.toggle() }
         .photosPicker(isPresented: $imagePickerPresented, selection: $viewModel.selectedImage)
+    }
+}
+
+extension UploadPostView {
+    private func dismissView() {
+        caption = ""
+        viewModel.cancelUpload()
+        tabIndex = 0 // Return back to Home tab in our MainTabView
     }
 }
 

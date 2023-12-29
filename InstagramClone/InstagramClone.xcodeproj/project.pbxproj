@@ -237,8 +237,8 @@
 		E06072C42B2385C500BF4856 /* UploadPost */ = {
 			isa = PBXGroup;
 			children = (
-				E0A0ABF82B278728006DCACE /* UploadPostView.swift */,
-				E0A0ABFA2B278C12006DCACE /* UploadPostViewModel.swift */,
+				E0C298372B3E42A300FE2645 /* View */,
+				E0C298362B3E429E00FE2645 /* ViewModel */,
 			);
 			path = UploadPost;
 			sourceTree = "<group>";
@@ -320,6 +320,22 @@
 			isa = PBXGroup;
 			children = (
 				E06072D12B23BDA600BF4856 /* SearchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E0C298362B3E429E00FE2645 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E0A0ABFA2B278C12006DCACE /* UploadPostViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E0C298372B3E42A300FE2645 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E0A0ABF82B278728006DCACE /* UploadPostView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
